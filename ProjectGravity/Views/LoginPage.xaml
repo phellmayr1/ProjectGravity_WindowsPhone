@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="ProjectGravity.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjectGravity"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+   
+
+        <Grid x:Name="ContentRoot" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+            
+            <Image Source="ms-appx:///Resources/logo.png" Grid.Row="0" />
+        <TextBox Name="ipTextBox" Text="http://127.0.0.1:3001" Grid.Row="1"/>
+        <TextBox Name="pinTextBox" Grid.Row="2" PlaceholderText="PIN" />
+<TextBlock Name="errorTextBlock" Grid.Row="3" Foreground="#FFF70C0C"  />
+            <Button Content="PLAY" Grid.Row="4" HorizontalAlignment="Stretch" Click="Button_Click" />
+
+    </Grid>
+</Page>
