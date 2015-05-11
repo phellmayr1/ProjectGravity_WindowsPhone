@@ -66,12 +66,13 @@ namespace ProjectGravity
 
           var socket = SocketIO.getSocket();
         
-            socket.On(Socket.EVENT_CONNECT, () =>
-            {
-                socket.Emit("checkPin",json);
+            //socket.On(Socket.EVENT_CONNECT, () =>
+            //{
+            //    socket.Emit("checkPin",json);
 
-            });
-            
+            //});
+
+          SocketIO.sendToServer(JsonConstants.CHECK_PIN, json);
 
             socket.On(JsonConstants.CHECKED_PIN, (data) =>
             {

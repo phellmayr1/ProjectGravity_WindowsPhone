@@ -22,5 +22,23 @@ namespace ProjectGravity
           return socket;
         
       }
+
+      public static void sendToServer(String eventString, String json)
+      {
+        if (socket == null)
+        {
+          getSocket();
+        }
+
+      //  socket.Connect();
+
+         socket.On(Socket.EVENT_CONNECT, () =>
+            {
+                socket.Emit(eventString,json);
+
+            });
+
+       // socket.Disconnect();
+      }
     }
 }
