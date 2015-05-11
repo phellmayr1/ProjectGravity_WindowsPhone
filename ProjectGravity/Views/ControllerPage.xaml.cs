@@ -66,7 +66,7 @@ namespace ProjectGravity.Views
 
                 Debug.WriteLine(JsonEncodeService.createPositionUpdateJsonArray(x, y, z));
 
-                var socket = Constants.socket;
+                var socket = SocketIO.getSocket();
                 socket.On(Socket.EVENT_CONNECT, () =>
                 {
                     socket.Emit(JsonConstants.POSITION_UPDATE, JsonEncodeService.createPositionUpdateJsonArray(x,y,z));

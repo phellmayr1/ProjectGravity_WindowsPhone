@@ -44,7 +44,7 @@ namespace ProjectGravity.Views
             //Send startGame and change Page
             //["startGame"]
 
-            var socket = Constants.socket;
+            var socket = SocketIO.getSocket();
             Debug.WriteLine(JsonConstants.START_GAME);
             socket.On(Socket.EVENT_CONNECT, () =>
             {

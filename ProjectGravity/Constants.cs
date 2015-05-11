@@ -9,7 +9,7 @@ namespace ProjectGravity
 {
     class Constants
     {
-      public static string SERVER_ADDRESS = "";
+        public static string SERVER_ADDRESS = "http://projectgravity.ddns.net:3001";
       public static Socket socket;
     }
 }

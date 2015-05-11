@@ -87,6 +87,7 @@
     <Compile Include="Json\JsonConstants.cs" />
     <Compile Include="Json\JsonEncodeService.cs" />
     <Compile Include="Json\PinJson.cs" />
+    <Compile Include="SocketIO.cs" />
     <Compile Include="Views\ControllerPage.xaml.cs">
       <DependentUpon>ControllerPage.xaml</DependentUpon>
     </Compile>

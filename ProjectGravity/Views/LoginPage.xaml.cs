@@ -29,7 +29,7 @@ namespace ProjectGravity
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : SocketIOPage
+    public sealed partial class MainPage : Page
     {
         public MainPage()
         {
@@ -63,9 +63,9 @@ namespace ProjectGravity
           JsonArrayAttribute a = new JsonArrayAttribute("array");
         //  JArray a;
 
-          Constants.SERVER_ADDRESS = ipTextBox.Text;
-            var socket = IO.Socket(ipTextBox.Text);
-          Constants.socket = socket;
+
+          var socket = SocketIO.getSocket();
+        
             socket.On(Socket.EVENT_CONNECT, () =>
             {
                 socket.Emit("checkPin",json);
