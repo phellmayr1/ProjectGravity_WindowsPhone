@@ -41,3 +41,8 @@ C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGra
 C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\obj\Debug\Views\OverviewPage.xbf
 C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\obj\Debug\Views\LoginPage.xaml
 C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\obj\Debug\Views\LoginPage.xbf
+C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\obj\Debug\Views\ControllerPage.g.i.cs
+C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\obj\Debug\Views\ControllerPage.g.cs
+C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\obj\Debug\Views\ControllerPage.xaml
+C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\obj\Debug\Views\ControllerPage.xbf
+C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\bin\Debug\Views\ControllerPage.xbf

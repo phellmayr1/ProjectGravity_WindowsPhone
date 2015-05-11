@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
             
             <Image Source="ms-appx:///Resources/logo.png" Grid.Row="0" />
-        <TextBox Name="ipTextBox" Text="http://127.0.0.1:3001" Grid.Row="1"/>
+        <TextBox Name="ipTextBox" Text="http://projectgravity.ddns.net:3001" Grid.Row="1"/>
         <TextBox Name="pinTextBox" Grid.Row="2" PlaceholderText="PIN" />
 <TextBlock Name="errorTextBlock" Grid.Row="3" Foreground="#FFF70C0C"  />
             <Button x:ConnectionId='1' Content="PLAY" Grid.Row="4" HorizontalAlignment="Stretch"                      />

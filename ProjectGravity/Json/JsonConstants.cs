@@ -14,7 +14,7 @@ namespace ProjectGravity.Json
     */
     public static readonly String POSITION_UPDATE = "positionUpdate";
     public static readonly String EVENT="event";
- public static readonly String START_GAME = "startGame";
+ public static readonly String START_GAME = @"[""startGame"",{}]";
 
     /*
     The following field defines the time, when the json should be send to the server in milliseconds

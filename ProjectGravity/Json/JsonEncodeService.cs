@@ -11,16 +11,16 @@ namespace ProjectGravity.Json
     {
         public static String createPinJsonArray(String pin)
         {
-            //["checkPin",{"pin":"123"}]
-
-          PinJson pinJson = new PinJson();
-          pinJson.Pin = pin;
-          return JsonConvert.SerializeObject(pinJson);
-
-          //jsonArray = new JSONArray();
-          //jsonArray.put(JsonConstants.CHECK_PIN);
-          //jsonArray.put(createJsonObject(JsonConstants.pin, pin));
-          //return jsonArray;
+            PinJson pinJson = new PinJson();
+            pinJson.Pin = pin;
+            return JsonConvert.SerializeObject(pinJson);
         }
+
+      public static String createPositionUpdateJsonArray(double x, double y, double z)
+      {
+        CoordinatesJson coordinates = new CoordinatesJson(x,y,z);
+        return JsonConvert.SerializeObject(coordinates);
+                  
+      }
     }
 }

@@ -58,6 +58,9 @@
     <AppxPackagedFile Include="C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\bin\Debug\Views\ControllerPage.xbf">
+      <PackagePath>Views\ControllerPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Philipp\documents\visual studio 2013\Projects\ProjectGravity\ProjectGravity\bin\Debug\Views\LoginPage.xbf">
       <PackagePath>Views\LoginPage.xbf</PackagePath>
     </AppxPackagedFile>

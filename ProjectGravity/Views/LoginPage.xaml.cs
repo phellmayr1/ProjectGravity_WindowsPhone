@@ -29,7 +29,7 @@ namespace ProjectGravity
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class MainPage : SocketIOPage
     {
         public MainPage()
         {
@@ -63,14 +63,17 @@ namespace ProjectGravity
           JsonArrayAttribute a = new JsonArrayAttribute("array");
         //  JArray a;
 
+          Constants.SERVER_ADDRESS = ipTextBox.Text;
             var socket = IO.Socket(ipTextBox.Text);
+          Constants.socket = socket;
             socket.On(Socket.EVENT_CONNECT, () =>
             {
                 socket.Emit("checkPin",json);
 
             });
+            
 
-            socket.On("checkedPin", (data) =>
+            socket.On(JsonConstants.CHECKED_PIN, (data) =>
             {
 
                 var x = JsonConvert.DeserializeObject<Newtonsoft.Json.Linq.JArray>(data.ToString());
@@ -85,6 +88,10 @@ namespace ProjectGravity
                       string value = p.Value.ToString();
                     if (name == "pin")
                     {
+
+                        Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+() =>
+{
                       if (value == "true")
                       {
                         Frame.Navigate(typeof(OverviewPage));
@@ -93,13 +100,12 @@ namespace ProjectGravity
                       {
                           ResourceLoader resourceLoader = new ResourceLoader();
 
-                          Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-() =>
-{
+                          
                           errorTextBlock.Text = resourceLoader.GetString("WrongPin/text"); 
+
+                      }
 }
 );
-                      }
                     }
                   }
               }

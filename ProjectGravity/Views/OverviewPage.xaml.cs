@@ -1,5 +1,8 @@
-﻿using System;
+﻿using ProjectGravity.Json;
+using Quobject.SocketIoClientDotNet.Client;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -34,6 +37,23 @@ namespace ProjectGravity.Views
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Send startGame and change Page
+            //["startGame"]
+
+            var socket = Constants.socket;
+            Debug.WriteLine(JsonConstants.START_GAME);
+            socket.On(Socket.EVENT_CONNECT, () =>
+            {
+                socket.Emit(JsonConstants.EVENT, JsonConstants.START_GAME);
+
+            });
+
+
+          Frame.Navigate(typeof(ControllerPage));
         }
     }
 }
